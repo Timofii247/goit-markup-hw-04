@@ -489,14 +489,32 @@ list-style: none;
     border: 1px solid #e7e9fc;
     border-top: none;
     box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+      
 }
 
 
 .portfolio-card{
     display: block;
     background-color: #fff;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     /* margin-bottom: 48px; */
 }
+
+.portfolio-card:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-card:hover img {
+    transform: translateY(0%);
+    transition: transform 250ms ease;
+}
+
+
+
 
 .footer{
     background: #2e2f42;
@@ -564,13 +582,7 @@ padding-bottom: 100px;
         letter-spacing: 0.02em;
         color: #fff;
         margin-bottom: 16px;
-}
-.footer-container{
-    display: flex;
-    align-items: baseline;
-
-
-
+    
 }
 
 .footer-list{
@@ -580,7 +592,17 @@ padding-bottom: 100px;
     padding-left: 0;
 
 
+
 }
+.footer-container{
+   
+    align-items: baseline;
+    padding: 20px;
+
+
+
+}
+
 
 
 .social-link-footer {
